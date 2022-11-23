@@ -24,6 +24,11 @@ export default function Root() {
           {<p>Страница регистрации - sign-up-page</p>}{" "}
         </NavLink>
         <NavLink
+          to={`sign-up`}
+        >
+          {<p>Страница пользователя - profile-page</p>}{" "}
+        </NavLink>
+        <NavLink
           to={`leaders`}
         >
           {<p>Страница лидерборда - leaders-page</p>}{" "}

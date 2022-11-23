@@ -11,10 +11,12 @@ import ForumPage from '@/routes/forum-page';
 import GameOverPage from '@/routes/game-over-page';
 import GamePage from '@/routes/game-page';
 import GameStartPage from '@/routes/game-start-page';
+import OnboardingPage from '@/routes/onboarding-page';
+import ProfilePage from '@/routes/profile-page';
 import LeadersPage from '@/routes/leaders-page';
 import SignInPage from '@/routes/sign-in-page';
 import SignUpPage from '@/routes/sign-up-page';
-import OnboardingPage from '@/routes/onboarding-page';
+
 
 import Contacts, { 
   loader as contactsLoader, action as contactsAction, 
@@ -84,6 +86,14 @@ const router = createBrowserRouter([
   {
     path: '/onboarding',
     element: <OnboardingPage />,
+    loader: contactsLoader,
+    action: contactsAction,
+    errorElement: <ErrorPage />,
+    children: [],
+  },
+  {
+    path: '/profile',
+    element: <ProfilePage />,
     loader: contactsLoader,
     action: contactsAction,
     errorElement: <ErrorPage />,
